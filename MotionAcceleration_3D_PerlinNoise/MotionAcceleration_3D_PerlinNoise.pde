@@ -17,6 +17,7 @@ void draw() {
     movers[i].checkEdges();
     movers[i].display();
     
+
     // draw a line if two circles come close
     for (int j = i+1; j < movers.length; j++) {
       // the distance of 2 vectors
@@ -34,6 +35,7 @@ class Mover {
   PVector acceleration;
   float maxspeed;
   
+
   // for perlin noise
   float increment = 0.01;
   float xoff = random(0, 1000);
@@ -50,6 +52,8 @@ class Mover {
     //    acceleration = new PVector(random(-1, 1), random(-1, 1), random(-1, 1));
     acceleration = PVector.random3D();
     acceleration.normalize();
+    acceleration = PVector.random3D(); // Returns a new 3D unit vector
+    //    acceleration.normalize();
     acceleration.mult(noise(xoff)*2);
     xoff += increment; 
 
