@@ -20,7 +20,8 @@ void draw() {
     // draw a line if two circles come close
     for (int j = i+1; j < movers.length; j++) {
       // the distance of 2 vectors
-      float distance = PVector.dist(movers[i].location, movers[j].location);
+      float distance = PVector.dist(movers[i].location, movers[j].location);  // static
+      //      float distance = movers[i].location.dist(movers[j].location);   // non-static
       if (distance<100) {
         line( movers[i].location.x, movers[i].location.y, movers[j].location.x, movers[j].location.y);
       }
