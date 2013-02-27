@@ -1,6 +1,6 @@
 Mover[] movers = new Mover[80];
 int border = 40; // the border from window
-int colorRange = 100; // 0-360
+int colorRange = 80; // 0-360
 
 void setup() {
   size(800, 800);
